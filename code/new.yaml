@@ -1,0 +1,95 @@
+parsers: # array
+  - reg: ^https://gkd.itjustasub.top/link/.*?
+    yaml:
+      prepend-rules:
+        - PROCESS-NAME,steam.exe,🔰国外流量
+        - PROCESS-NAME,steamservice.exe,🔰国外流量
+        - PROCESS-NAME,steamwebhelper.exe,🔰国外流量
+        - MATCH,ratt.juno.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,desktop-config.juno.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,confluence.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,service-aggregation-layer.juno.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,accounts.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,signin.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,ea-api.arkoselabs.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,pin-river.data.ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - MATCH,eaassets-a.akamaihd.net,[vip1] 台湾01 [1.0|三网|trojan]
+        - DOMAIN,ea.com,[vip1] 台湾01 [1.0|三网|trojan]
+        - PROCESS-NAME,EADesktop.exe,[vip1] 台湾01 [1.0|三网|trojan]
+        - PROCESS-NAME,EABackgroundService.exe,[vip1] 台湾01 [1.0|三网|trojan]
+        - PROCESS-NAME,EALaunchHelper.exe,[vip1] 台湾01 [1.0|三网|trojan]
+        - DOMAIN-SUFFIX,colab.research.google.com,[Vip1] 日本 01 [1.0|移动|ssr]
+        - DOMAIN-SUFFIX,chat.openai.com,[Vip2] 美国04 [1.0|联通|ssr]
+        - DOMAIN-KEYWORD,bing,[Vip2] 美国04 [1.0|联通|ssr]
+        - DOMAIN-KEYWORD,github,[Vip2] 美国04 [1.0|联通|ssr]
+        - DOMAIN,anaconda.com,[Vip1] 日本 01 [1.0|移动|ssr]
+        - DOMAIN-KEYWORD,anaconda,[Vip1] 日本 01 [1.0|移动|ssr]
+
+#  name: 🔰国外流量
+#     type: select
+#     proxies:
+#       - '[vip1] 新加坡01 [1.0|移动|trojan]'
+#       - '[vip1] 新加坡02 [1.0|移动|trojan]'
+#       - '[vip1] 新加坡03 [1.0|移动|trojan]'
+#       - '[vip1] 台湾01 [1.0|三网|trojan]'
+#       - '[vip1] 台湾02 [1.0|三网|trojan]'
+#       - '[vip1] 日本 [1.0|移动|trojan]'
+#       - '[vip1] 美国 [1.0|移动|trojan]'
+#       - '[vip1] 香港01 [1.0|移动|trojan]'
+#       - '[vip1] 香港02 [1.0|移动|trojan]'
+#       - '[vip1] 香港03 [1.0|移动|trojan]'
+#       - '[vip1] 香港04 [1.0|移动|trojan]'
+#       - '[vip1] 马来 [1.0|移动|trojan]'
+#       - '[Vip1] 台湾01 [1.0|移动|ssr]'
+#       - '[Vip1] 台湾01 [1.0|联通|ssr]'
+#       - '[Vip1] 台湾02 [1.0|移动|ssr]'
+#       - '[Vip1] 台湾02 [1.0|联通|ssr]'
+#       - '[Vip1] 俄罗斯01 [1.0|联通|ssr]'
+#       - '[Vip1] 新加坡01 [1.0|移动|DO]'
+#       - '[Vip1] 新加坡02 [1.0|移动|DO]'
+#       - '[Vip1] 新加坡03 [1.0|移动|DO]'
+#       - '[Vip1] 新加坡04 [1.0|移动|DO]'
+#       - '[Vip1] 新加坡05 [1.0|移动|DO]'
+#       - '[Vip1] 新加坡06 [1.0|移动|DO]'
+#       - '[Vip1] 日本 01 [1.0|移动|ssr]'
+#       - '[Vip1] 日本 02 [1.0|联通|ssr]'
+#       - '[Vip1] 日本 03 [1.0|移动|ssr]'
+#       - '[Vip1] 日本 04 [1.0|联通|ssr]'
+#       - '[Vip1] 美国01 [1.0|联通|ssr]'
+#       - '[Vip1] 美国02 [1.0|移动|ssr]'
+#       - '[Vip1] 美国03 [1.0|移动|ssr]'
+#       - '[Vip1] 美国04 [1.0|联通|ssr]'
+#       - '[Vip1] 韩国01 [1.0|移动|ssr]'
+#       - '[Vip1] 韩国01 [1.0|联通|ssr]'
+#       - '[Vip1] 香港01 [1.0|移动|ssr]'
+#       - '[Vip1] 香港02 [1.0|移动|ssr]'
+#       - '[Vip1] 香港03 [1.0|移动|ssr]'
+#       - '[Vip1] 香港04 [1.0|移动|ssr]'
+#       - '[Vip2] 印度 01 [1.0|移动|ssr]'
+#       - '[Vip2] 印度02 [1.0|移动|ssr]'
+#       - '[Vip2] 墨西哥01 [1.0|移动|ssr]'
+#       - '[Vip2] 墨西哥02 [1.0|联通|ssr]'
+#       - '[Vip2] 德国 [1.0|移动|ssr]'
+#       - '[Vip2] 德国 [1.0|联通|ssr]'
+#       - '[Vip2] 悉尼01 [1.0|移动|ssr]'
+#       - '[Vip2] 悉尼02 [1.0|联通|ssr]'
+#       - '[Vip2] 深港专线 01 [5.0|移动|ssr]'
+#       - '[Vip2] 深港专线 02 [5.0|移动|ssr]'
+#       - '[Vip2] 深港专线 03 [5.0|移动|ssr]'
+#       - '[Vip2] 美国01 [1.0|联通|ssr]'
+#       - '[Vip2] 美国02 [1.0|联通|ssr]'
+#       - '[Vip2] 美国03 [1.0|联通|ssr]'
+#       - '[Vip2] 美国04 [1.0|联通|ssr]'
+#       - '[Vip2] 英国 [1.0|移动|ssr]'
+#       - '[Vip2] 英国 [1.0|联通|ssr]'
+#       - '[Vip2] 莞港专线 01 [10.0|移动|ssr]'
+#       - '[Vip2] 莞港专线 02 [10.0|移动|ssr]'
+#       - '[Vip2] 莞港专线 03 [10.0|移动|ssr]'
+#       - '[vip2] 香港 免登录看奈飞 [1.0|移动|trojan]'
+#       - '[Vip2] 香港01 [1.0|移动|ssr]'
+#       - '[Vip2] 香港02 [1.0|移动|ssr]'
+#       - '[Vip2] 香港03 [1.0|移动|ssr]'
+#       - '[Vip2] 香港04 [1.0|移动|ssr]'
+#       - '[Vip2] 马来西亚 01 [1.0|移动|ssr]'
+#       - '[Vip2] 马来西亚 02 [1.0|移动|ssr]'
+#       - 🚀直接连接
